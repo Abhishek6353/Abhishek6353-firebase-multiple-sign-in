@@ -19,4 +19,12 @@ struct ToastMessages {
     static var resetPasswordLinkSent = "Reset password link sent to your registered mail"
     static var passwordNotMatch = "The passwords entered do not match."
     
+    static var accountCreated = "Your account has been created Successfully!"
+    static var loginSuccess = "Login successfully!"
+    static var logoutSuccess = "You have been successfully logged out."
+}
+
+
+struct Keys {
+    static var userDetail = "userDetail"
 }

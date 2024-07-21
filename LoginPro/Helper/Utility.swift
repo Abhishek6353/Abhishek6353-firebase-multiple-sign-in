@@ -7,10 +7,6 @@
 
 import UIKit
 import SVProgressHUD
-//import MapKit
-//import MobileCoreServices
-//import AVKit
-//import SDWebImage
 
 
 class Utility: NSObject {

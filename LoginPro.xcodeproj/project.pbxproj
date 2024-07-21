@@ -18,6 +18,8 @@
 		46BC3F8D2C4CD18A00A21920 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F8C2C4CD18A00A21920 /* Constants.swift */; };
 		46BC3F8F2C4CE1F700A21920 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */; };
 		46BC3F912C4CE3CC00A21920 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F902C4CE3CC00A21920 /* Extensions.swift */; };
+		46BC3F982C4CF66600A21920 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F972C4CF66600A21920 /* HomeVC.swift */; };
+		46BC3F9A2C4D08DA00A21920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46BC3F992C4D08DA00A21920 /* GoogleService-Info.plist */; };
 		BBA5EC84D9C63D7794E285A9 /* Pods_LoginPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBB044D5A3DD46C05A45FB1 /* Pods_LoginPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		46BC3F8C2C4CD18A00A21920 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		46BC3F902C4CE3CC00A21920 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		46BC3F972C4CF66600A21920 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		46BC3F992C4D08DA00A21920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DBB044D5A3DD46C05A45FB1 /* Pods_LoginPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94288698A20B8DE71D72684 /* Pods-LoginPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPro.debug.xcconfig"; path = "Target Support Files/Pods-LoginPro/Pods-LoginPro.debug.xcconfig"; sourceTree = "<group>"; };
 		D0436A983C859F42D73C21A7 /* Pods-LoginPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPro.release.xcconfig"; path = "Target Support Files/Pods-LoginPro/Pods-LoginPro.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				46BC3F852C4CD11600A21920 /* Helper */,
 				46BC3F722C4CC73C00A21920 /* Assets.xcassets */,
 				46BC3F772C4CC73C00A21920 /* Info.plist */,
+				46BC3F992C4D08DA00A21920 /* GoogleService-Info.plist */,
 			);
 			path = LoginPro;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				46BC3F832C4CC9F700A21920 /* LoginVC.swift */,
 				46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */,
+				46BC3F972C4CF66600A21920 /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 				46BC3F632C4CC73A00A21920 /* Frameworks */,
 				46BC3F642C4CC73A00A21920 /* Resources */,
 				A823B7393D1715586B6215FE /* [CP] Embed Pods Frameworks */,
+				46BC3F942C4CECE100A21920 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -199,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BC3F762C4CC73C00A21920 /* LaunchScreen.storyboard in Resources */,
+				46BC3F9A2C4D08DA00A21920 /* GoogleService-Info.plist in Resources */,
 				46BC3F732C4CC73C00A21920 /* Assets.xcassets in Resources */,
 				46BC3F712C4CC73A00A21920 /* Main.storyboard in Resources */,
 			);
@@ -229,6 +237,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		46BC3F942C4CECE100A21920 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		A823B7393D1715586B6215FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +286,7 @@
 				46BC3F8F2C4CE1F700A21920 /* SignUpVC.swift in Sources */,
 				46BC3F8B2C4CD12D00A21920 /* Validation_Model.swift in Sources */,
 				46BC3F8A2C4CD12D00A21920 /* Utility.swift in Sources */,
+				46BC3F982C4CF66600A21920 /* HomeVC.swift in Sources */,
 				46BC3F912C4CE3CC00A21920 /* Extensions.swift in Sources */,
 				46BC3F842C4CC9F700A21920 /* LoginVC.swift in Sources */,
 				46BC3F892C4CD12D00A21920 /* Toast.swift in Sources */,
@@ -413,6 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = M9WYKNZLTB;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpVC: UIViewController {
     
@@ -38,11 +39,41 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
-
+        signUp()
     }
 
 
     //MARK: - Functions
+    private func signUp() {
+        if isValidForSignUp() {
+            Utility.showLoadingView()
+            
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                
+                guard let user = authResult?.user, error == nil else {
+                    Utility.hideLoadingView()
+                    self.view.makeToast(error?.localizedDescription, duration: 1.0, position: .top)
+                    return
+                }
+                
+                let changeRequest = user.createProfileChangeRequest()
+                changeRequest.displayName = "\(self.firstName):\(self.lastName)"
+                changeRequest.commitChanges { error in
+                    
+                    if let error = error {
+                        Utility.hideLoadingView()
+                        self.view.makeToast(error.localizedDescription, duration: 1.0, position: .top)
+                        
+                    } else {
+                        Utility.hideLoadingView()
+                        self.navigationController?.popViewController(animated: true)
+                        AppDelegate.classInstance().mainNav.topViewController?.view.makeToast(ToastMessages.accountCreated)
+                    }
+                }
+            }
+        }
+    }
+    
     private func isValidForSignUp() -> Bool {
         
         let confirmPassword = confirmPasswordTextField.text ?? ""

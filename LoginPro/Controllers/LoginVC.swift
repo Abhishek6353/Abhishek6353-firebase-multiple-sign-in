@@ -94,9 +94,29 @@ class LoginVC: UIViewController {
     }
     
     private func login() {
-        
         if isValidForLogin() {
-
+            Utility.showLoadingView()
+            
+            Auth.auth().signIn(withEmail: email , password: password) { (result, error) in
+                
+                if let error = error
+                {
+                    self.view.makeToast(error.localizedDescription, duration: 1.0, position: .top)
+                    Utility.hideLoadingView()
+                    return
+                }
+                else
+                {
+                    Utility.hideLoadingView()
+                    guard let user = result?.user else { return }
+                    self.emailTextField.text = ""
+                    self.passwordTextField.text = ""
+                    
+                    let homeVC = self.storyboard?.instantiateViewController(identifier: HomeVC.className) as! HomeVC
+                    AppDelegate.classInstance().mainNav.pushViewController(homeVC, animated: true)
+                    AppDelegate.classInstance().mainNav.topViewController?.view.makeToast(ToastMessages.loginSuccess)
+                }
+            }
         }
     }
     

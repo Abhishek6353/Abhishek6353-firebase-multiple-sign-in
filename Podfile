@@ -9,6 +9,6 @@ target 'LoginPro' do
 pod 'FirebaseCore'
 pod 'SVProgressHUD'
 pod 'Firebase/Auth'
-
+pod 'FirebaseCrashlytics'
 
 end
