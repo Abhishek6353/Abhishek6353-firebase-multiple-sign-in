@@ -17,7 +17,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         if let name = Auth.auth().currentUser?.displayName {
-            nameLabel.text = name
+            nameLabel.text = "Hi, \(name)"
         }
         
     }
