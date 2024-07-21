@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginVC: UIViewController {
     
     var email = ""
     var password = ""
@@ -62,6 +62,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
+        let signUpVC = self.storyboard?.instantiateViewController(identifier: SignUpVC.className) as! SignUpVC
+        AppDelegate.classInstance().mainNav.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func closeForgotViewClicked(_ sender: UIButton) {
@@ -135,7 +137,7 @@ class LoginViewController: UIViewController {
 
 //MARK: - UITextField Delegate
 
-extension LoginViewController : UITextFieldDelegate {
+extension LoginVC : UITextFieldDelegate {
 
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

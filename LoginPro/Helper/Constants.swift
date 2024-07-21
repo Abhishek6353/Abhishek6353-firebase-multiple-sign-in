@@ -17,4 +17,6 @@ struct ToastMessages {
     static var enterPassword = "Please enter password."
     static var enterValidPassword = "Password must be at least 6 characters long."
     static var resetPasswordLinkSent = "Reset password link sent to your registered mail"
+    static var passwordNotMatch = "The passwords entered do not match."
+    
 }

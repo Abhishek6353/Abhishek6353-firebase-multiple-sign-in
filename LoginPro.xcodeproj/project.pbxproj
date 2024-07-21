@@ -11,11 +11,13 @@
 		46BC3F712C4CC73A00A21920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BC3F6F2C4CC73A00A21920 /* Main.storyboard */; };
 		46BC3F732C4CC73C00A21920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46BC3F722C4CC73C00A21920 /* Assets.xcassets */; };
 		46BC3F762C4CC73C00A21920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46BC3F742C4CC73C00A21920 /* LaunchScreen.storyboard */; };
-		46BC3F842C4CC9F700A21920 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F832C4CC9F700A21920 /* LoginViewController.swift */; };
+		46BC3F842C4CC9F700A21920 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F832C4CC9F700A21920 /* LoginVC.swift */; };
 		46BC3F892C4CD12D00A21920 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F862C4CD12D00A21920 /* Toast.swift */; };
 		46BC3F8A2C4CD12D00A21920 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F872C4CD12D00A21920 /* Utility.swift */; };
 		46BC3F8B2C4CD12D00A21920 /* Validation_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F882C4CD12D00A21920 /* Validation_Model.swift */; };
 		46BC3F8D2C4CD18A00A21920 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F8C2C4CD18A00A21920 /* Constants.swift */; };
+		46BC3F8F2C4CE1F700A21920 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */; };
+		46BC3F912C4CE3CC00A21920 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC3F902C4CE3CC00A21920 /* Extensions.swift */; };
 		BBA5EC84D9C63D7794E285A9 /* Pods_LoginPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBB044D5A3DD46C05A45FB1 /* Pods_LoginPro.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,11 +28,13 @@
 		46BC3F722C4CC73C00A21920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46BC3F752C4CC73C00A21920 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46BC3F772C4CC73C00A21920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46BC3F832C4CC9F700A21920 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		46BC3F832C4CC9F700A21920 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		46BC3F862C4CD12D00A21920 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		46BC3F872C4CD12D00A21920 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		46BC3F882C4CD12D00A21920 /* Validation_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation_Model.swift; sourceTree = "<group>"; };
 		46BC3F8C2C4CD18A00A21920 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		46BC3F902C4CE3CC00A21920 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7DBB044D5A3DD46C05A45FB1 /* Pods_LoginPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94288698A20B8DE71D72684 /* Pods-LoginPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPro.debug.xcconfig"; path = "Target Support Files/Pods-LoginPro/Pods-LoginPro.debug.xcconfig"; sourceTree = "<group>"; };
 		D0436A983C859F42D73C21A7 /* Pods-LoginPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginPro.release.xcconfig"; path = "Target Support Files/Pods-LoginPro/Pods-LoginPro.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +96,8 @@
 		46BC3F802C4CC9AA00A21920 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46BC3F832C4CC9F700A21920 /* LoginViewController.swift */,
+				46BC3F832C4CC9F700A21920 /* LoginVC.swift */,
+				46BC3F8E2C4CE1F700A21920 /* SignUpVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				46BC3F862C4CD12D00A21920 /* Toast.swift */,
 				46BC3F872C4CD12D00A21920 /* Utility.swift */,
 				46BC3F882C4CD12D00A21920 /* Validation_Model.swift */,
+				46BC3F902C4CE3CC00A21920 /* Extensions.swift */,
 				46BC3F8C2C4CD18A00A21920 /* Constants.swift */,
 			);
 			path = Helper;
@@ -247,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BC3F8F2C4CE1F700A21920 /* SignUpVC.swift in Sources */,
 				46BC3F8B2C4CD12D00A21920 /* Validation_Model.swift in Sources */,
 				46BC3F8A2C4CD12D00A21920 /* Utility.swift in Sources */,
-				46BC3F842C4CC9F700A21920 /* LoginViewController.swift in Sources */,
+				46BC3F912C4CE3CC00A21920 /* Extensions.swift in Sources */,
+				46BC3F842C4CC9F700A21920 /* LoginVC.swift in Sources */,
 				46BC3F892C4CD12D00A21920 /* Toast.swift in Sources */,
 				46BC3F8D2C4CD18A00A21920 /* Constants.swift in Sources */,
 				46BC3F6A2C4CC73A00A21920 /* AppDelegate.swift in Sources */,
