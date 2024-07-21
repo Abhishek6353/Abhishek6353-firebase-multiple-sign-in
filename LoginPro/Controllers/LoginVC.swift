@@ -73,7 +73,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotEmailSubmitClicked(_ sender: UIButton) {
-
+        sendPasswordResentlink()
     }
     
     @IBAction func closeResendMailViewClicked(_ sender: UIButton) {
@@ -123,8 +123,41 @@ class LoginVC: UIViewController {
     
     private func sendPasswordResentlink() {
         
+        if let email = forgotEmailTextfield.text {
+            
+            if !Validation_Model.validateWhiteSpace(email) {
+                self.view.makeToast(ToastMessages.enterEmail, duration: 1.0, position: .top)
+                return
+            }
+            
+            if !Validation_Model.isValidEmail(testStr: email) {
+                self.view.makeToast(ToastMessages.enterValidEmail, duration: 1.0, position: .top)
+                return
+            }
+            
+            
+            Utility.showLoadingView()
+            
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+                
+                if let error = error {
+                    self.view.makeToast(error.localizedDescription, duration: 1.0, position: .top)
+                    Utility.hideLoadingView()
+                    return
+                }
+                else
+                {
+                    Utility.hideLoadingView()
+                    self.view.makeToast(ToastMessages.resetPasswordLinkSent, duration: 1.0, position: .top)
+                    
+                    self.forgotView.isHidden = true
+                    self.forgotEmailTextfield.resignFirstResponder()
+                    self.forgotEmailTextfield.text = ""
+                }
+            }
+        }
     }
-    
+
     private func isValidForLogin() -> Bool {
         
         email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
