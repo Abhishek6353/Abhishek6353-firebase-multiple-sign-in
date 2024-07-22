@@ -49,7 +49,7 @@ pod install
 5. Add the `GoogleService-Info.plist` file to your Xcode project.
 
 
-### 4. Google Sign-In Setup
+### [4. Google Sign-In Setup](https://firebase.google.com/docs/auth/ios/google-signin)
 1. Enable Google Sign-In in the Firebase Console under the "Authentication" section.
 2. Configure the URL schemes in your Xcode project:
    - Open your project configuration: double-click the project name in the project navigator.
@@ -57,7 +57,7 @@ pod install
    - Click the "+" button, and add a URL scheme for your reversed client ID. This should be the REVERSED_CLIENT_ID   value from the `GoogleService-Info.plist`.
 
 
-### 5. Apple Sign-In Setup
+### 5. [Apple Sign-In Setup](https://firebase.google.com/docs/auth/ios/apple)
 1. Enable Apple Sign-In in the Firebase Console under the "Authentication" section.
 2. Configure the Apple Sign-In capability in Xcode:
   - Select your project and your target.
@@ -71,9 +71,6 @@ pod install
 2. Build and run the app on a simulator or device.
 3. Use the app to create a new user or sign in with email/password, Google, or Apple.
 
-
-## Contact
-For any questions or suggestions, please open an issue or contact me at itsabhi814@gmail.com.
 
 
 
